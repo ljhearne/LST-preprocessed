@@ -1,5 +1,7 @@
 # LST-preprocessed
-Code for the preprocessing and QC of the LST7T dataset
+Code for the preprocessing and QC of the LST7T dataset.
+
+The data can be found at QIMR: *TBA*
 
 ## Preprocessing
 Fmriprep was run on the LST BIDS data. Due to the nature of the 7T, in particular the MP2RAGE structural scans we used a no freesurfer based pipeline. In addition no fieldmaps were collected and SBREF files could not be used. Generating EPI-based fieldmaps or incorporating the SBREF files results in major errors in the preprocessed images. With a lot of trial and error we found that a basic "volumetric" approach produces the best images with fewer errors.
@@ -21,8 +23,28 @@ The following flags were used:
   3. Reasoning GLM approach, see __.ipynb__
   
   ### Head motion
- ![FD](code/figs/FD_boxplot.jpeg)
+  ![FD](code/figs/FD_boxplot.jpeg)
   ![FD](code/figs/FD_countplot.jpeg)
 
   ### GLMs
+  #### Group level finger representations
+  (Bonf corrected @ 0.001 (high threshold!))
+  
+  ![](code/figs/group_glm-leftindex.jpeg)
+  ![](code/figs/group_glm-rightindex.jpeg)
+  ![](code/figs/group_glm-leftmiddle.jpeg)
+  ![](code/figs/group_glm-rightmiddle.jpeg)
+
+
+  #### Similarity between participants (low = bad)
+  ![](code/figs/FingerSimilarity-avg.jpeg)
+
+  #### Group level relational complexity representations
+  ![](code/figs/group_glm-ternary.jpeg)
+  ![](code/figs/group_glm-quaternary.jpeg)
+
+  #### Similarity between participants (low = bad)
+  ![](code/figs/RelationalComplexitySimilarity-avg.jpeg)
+
+
 
