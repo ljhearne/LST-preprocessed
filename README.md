@@ -14,11 +14,15 @@ The following flags were used:
   --fs-no-reconall \
   --fs-license-file /software/freesurfer/freesurfer-6.0.1/license.txt
   
-  ## QC checks
+  ## QC / sanity checks
   Given the difficulties with this data I performed extra quality control analyses. These were undertaken with the assumption that better subjects will show clearer task activations. The clarity of finger-specific motor activations in particular, which are basically orthogonal to the reasoning aspect of the LST, were considered as a bench mark.
   1. Typical head motion, see __.ipynb__
   2. Motor GLM approach, see __.ipynb__
   3. Reasoning GLM approach, see __.ipynb__
   
-  # Final subject list
-  Based on the above I have listed a final N of X subjects that I think represent the best subjects.
+  ### Head motion
+ ![FD](code/figs/FD_boxplot.jpeg)
+  ![FD](code/figs/FD_countplot.jpeg)
+
+  ### GLMs
+
