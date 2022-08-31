@@ -1,7 +1,7 @@
 # LST-preprocessed
 Code for the preprocessing and QC of the LST7T dataset.
 
-The data can be found at QIMR: *TBA*
+Contact me for more information.
 
 ## Preprocessing
 Fmriprep was run on the LST BIDS data. Due to the nature of the 7T, in particular the MP2RAGE structural scans we used a no freesurfer based pipeline. In addition no fieldmaps were collected and SBREF files could not be used. Generating EPI-based fieldmaps or incorporating the SBREF files results in major errors in the preprocessed images. With a lot of trial and error we found that a basic "volumetric" approach produces the best images with fewer errors.
